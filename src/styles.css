@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  flex: 1;
+}
+
+p {
+  font-family: Inria Sans;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.98px;
+  text-align: center;
+}
+
+/* Dropdown-Menü */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-family: Inria Sans;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.98px;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+}
+
+/* Title Styles */
+.title-container {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.title-container .h1-holder {
+  height: 125px;
+}
+
+.title-container .h1-holder {
+  height: 100px;
+}
+
+.title-container h1 {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 89.93px;
+  text-align: center;
+}
+
+.title-container h2 {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76.74px;
+  text-align: center;
+}
+
+.title-container h3 {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.16px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.title-container hr {
+  width: 35px;
+  height: 4px;
+  background: black;
+  border: 0px;
+  margin: 10px auto 20px auto;
+  border-radius: 5px;
+}
+
+.not-found-container {
+  margin: 0;
+}
+
+.not-found-container h1 {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 191.74px;
+  text-align: center;
+  color: #3c74a4;
+  margin: 0;
+}
+
+#login-title-container,
+#logout-title-container {
+  margin-bottom: 30px;
+}
+
+/* Search Bar Styles */
+.title-container .search-bar {
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.37px;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+  border: solid, 3px, #e2ebf2;
+  cursor: text;
+  align-items: center;
+  justify-content: center;
+  min-width: 550px;
+  height: 40px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.title-container .search-bar:focus {
+  border: none;
+}
+
+/* Footer Styles */
+.footer {
+  background: #487faf;
+  color: white;
+  height: 331px;
+  margin-top: 200px;
+  text-align: center;
+}
+
+.footer .content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  max-width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer .left-container,
+.footer .right-container {
+  flex: 1;
+}
+
+.footer .right-container {
+  margin-top: auto;
+}
+
+.footer .left-container {
+  text-align: left;
+}
+
+.footer .right-container p {
+  text-align: right;
+}
+
+.footer .left-container p {
+  text-align: left;
+}
+
+.footer a {
+  text-decoration-color: white;
+  color: white;
+}
+
+.footer a:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.footer h2 {
+  color: white;
+  font-family: 'Just Me Again Down Here';
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 143.81px;
+}
+
+.footer p {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.78px;
+  padding: 5px;
+}
+
+/* Container für das Account-Icon */
+.account-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 404 Not Found */
+.not-found-title-container h1 {
+  font-family: Just Me Again Down Here;
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 299.6px;
+  text-align: center;
+  color: #487faf;
+}
+
+.not-found-title-container h2 {
+  font-family: Inria Sans;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.55px;
+  text-align: center;
+  margin: 50px;
+}
+
+.not-found-title-container p {
+  font-family: Inria Sans;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.98px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}

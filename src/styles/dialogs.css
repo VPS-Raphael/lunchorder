@@ -1,0 +1,424 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-container {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  min-height: 20px;
+  min-width: 20px;
+  overflow-y: auto;
+  outline: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.dialog-container.open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/********** CONFIRM DIALOG **********/
+.confirm-dialog-container {
+  font-family: Inria Sans;
+  color: #374151;
+}
+
+.confirm-dialog-header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #374151;
+  font-weight: 700;
+  line-height: 38.37px;
+  letter-spacing: 0.5px;
+}
+
+.confirm-dialog-header h2 {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.confirm-dialog-header button {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  color: #6b7280;
+  border: 0 none;
+  background: transparent;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.confirm-dialog-header button:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+  color: #374151;
+}
+
+.confirm-dialog-body {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.confirm-dialog-body p {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.confirm-dialog-footer {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.confirm-dialog-footer button {
+  margin: 10px 10px;
+  padding: 5px;
+  width: 65px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.confirm-dialog-container button:hover {
+  cursor: pointer;
+}
+
+.confirm-dialog-close-button {
+  color: #3c74a4;
+  border: none;
+  background: none;
+  border-radius: 10px;
+}
+
+.confirm-dialog-close-button:hover {
+  background-color: rgba(7, 182, 213, 0.1);
+  color: #3c74a4;
+  border-color: #07b6d5;
+}
+
+.confirm-dialog-confirm-button {
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #3c74a4;
+  background-color: #3c74a4;
+}
+
+.confirm-dialog-confirm-button:hover {
+  background: #07b6d5;
+  border-color: #07b6d5;
+}
+
+/********** ORDER DIALOG **********/
+.order-dialog-container {
+  font-family: Inria Sans;
+  color: #374151;
+}
+
+.order-dialog-header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #374151;
+  font-weight: 700;
+  line-height: 38.37px;
+  letter-spacing: 0.5px;
+}
+
+.order-dialog-header h2 {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.order-dialog-header button {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  color: #6b7280;
+  border: 0 none;
+  background: transparent;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.order-dialog-header button:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+  color: #374151;
+}
+
+.order-dialog-body {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.order-dialog-footer {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.order-dialog-footer button {
+  margin: 10px 10px;
+  padding: 5px;
+  width: 65px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.order-dialog-container button:hover {
+  cursor: pointer;
+}
+
+.order-dialog-close-button {
+  color: #3c74a4;
+  border: none;
+  background: none;
+  border-radius: 10px;
+}
+
+.order-dialog-close-button:hover {
+  background-color: rgba(7, 182, 213, 0.1);
+  color: #3c74a4;
+  border-color: #07b6d5;
+}
+
+.order-dialog-confirm-button {
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #3c74a4;
+  background-color: #3c74a4;
+}
+
+.order-dialog-confirm-button:hover {
+  background: #07b6d5;
+  border-color: #07b6d5;
+}
+
+.rad-container {
+  display: flex;
+}
+
+.rad-label {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 10px 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, 0.14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, #07b6d5, #3c74a4);
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+
+  transition: 0.3s;
+}
+
+.rad-input:checked ~ .rad-text {
+  color: hsl(0, 0%, 40%);
+}
+
+.time-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.time-picker-container h3 {
+  margin-right: 20px;
+}
+
+input#timeInput {
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 400;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+input#timeInput:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+/********** ORDER OVERVIEW DIALOG **********/
+#order-overview-dialog {
+  border-radius: 30px;
+}
+
+.order-overview-dialog-container {
+  width: 1200px;
+  min-height: 300px;
+  background-color: #e2ebf2;
+  align-items: center;
+  padding: 60px;
+}
+
+.order-overview-dialog-header h1 {
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 75px;
+  color: #487faf;
+}
+
+.order-overview-dialog-header {
+  align-items: start;
+}
+
+.info-container {
+  display: flex;
+  margin-top: 50px;
+  padding: 10px 50px;
+  border-radius: 50px;
+  background: #487faf;
+  margin-bottom: 20px;
+}
+
+.info-container h2 {
+  font-family: Inria Sans;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43.16px;
+  text-align: left;
+  color: white;
+}
+
+.data-container {
+  padding: 0 50px;
+}
+
+.data-container p {
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 43.16px;
+  text-align: left;
+  margin-top: 15px;
+  color: #374151;
+}
+
+#order-overview-icon-container {
+  display: flex;
+}
+
+#order-overview-icon-container svg {
+  margin: 0 15px;
+  fill: #374151;
+}
+
+#order-overview-icon-container svg:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.user-data-container {
+  display: flex;
+  width: 100%;
+}
+
+.s1 {
+  flex: 2;
+}
+
+.s2 {
+  flex: 1.5;
+}
+
+.s3 {
+  flex: 2;
+}
+
+.s4 {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
